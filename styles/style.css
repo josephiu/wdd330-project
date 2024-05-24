@@ -1,0 +1,451 @@
+:root{
+    --primary-color-richBlack:  #050018;
+    --secondary-color-DarkCyan: #009793;
+    --tertiary-color-Lion: #C59253;
+    --light-grey: #d0d0d0;
+    --dark-grey: #303030;
+    --font1: "Radio Canada Big", sans-serif;
+  
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #333;
+}
+
+
+
+.divider {
+    border-bottom: 2px solid var(--secondary-color-DarkCyan);
+    display: flex;
+    padding: 1rem;
+      justify-content: space-between;
+  background-color: var(--secondary-color-DarkCyan);
+}
+
+.logo {
+    line-height: 60px;
+    width: 245px;
+    overflow: hidden;
+    display: flex;
+    font-size: 30px;
+    text-align: right;
+    font-family: var(--font-headline);
+    color: var(--dark-grey);
+}
+
+.highlight{
+    background-color: #bb6311;
+    color: var(--light-grey);
+    font-size: smaller;
+    padding: 0.2rem;
+    font-family: var(--font1)
+    
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--font-body);
+ }
+
+.myNav{
+
+    gap: 0.5rem;
+    display: flex;
+
+    padding: 1rem;
+    
+   
+}
+
+
+.myNav a{
+    text-decoration: none;
+    background-color: #f0a868;
+    padding: 1rem;
+    color: #000000;
+}
+
+.Hambuga-menu{
+    display: none;
+}
+
+.Hero picture img{
+    position:block;
+    width: 100%;    
+}
+
+.left-px{
+    position: relative;
+}
+
+.right-px{
+    position: absolute;
+    top: 40%;      
+    margin-left: 5%;
+    margin-right: 5%;  
+    
+
+
+}
+
+.right-px h1{ 
+    font-family: "Radio Canada Big", sans-serif;    
+   font-size: xx-large;
+   font-weight:900;
+   color: var(--light-grey);
+   text-shadow: 2px 2px 0.5px #000000;
+  }
+
+  #learn-more-text{
+    background-color: #C59253;
+    padding: 1rem;
+  }
+
+  #learn-more-btn{
+    background-color: var(--tertiary-color-Lion);
+    
+  }
+    
+      
+ 
+.section-crypo{
+    background-image:url(../images/960x0new.png);   
+    background-color: #009793;
+    background-size:cover;
+   
+}
+#crypto-prices h2{
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    color:var(--tertiary-color-Lion);    
+
+}
+ 
+
+
+
+
+#crypto-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+#crypto-controls input, #crypto-controls select {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+#crypto-prices, #newsletter, #crypto-charts {
+    margin-bottom: 2em;
+}
+
+form, #newsletter h2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label, form input, form button {
+    margin-bottom: 1em;
+}
+
+form input, form button {
+    padding: 0.5em;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#newsletter{
+    background: var(--tertiary-color-Lion);
+    padding: 2rem;
+}
+
+#newsletter h2{
+    padding: 2rem;
+    font: optional;
+    font-family: var(--font1);
+    font-optical-sizing: auto;
+  font-weight:700;
+  font-style: normal;
+}
+
+
+
+@media (max-width: 700px) {
+     
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #crypto-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #crypto-controls input, #crypto-controls select {
+        margin-bottom: 1em;
+        width: 100%;
+    }
+}
+
+#prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.crypto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    margin: 1em;
+    transition: transform 0.2s;
+}
+
+.crypto-card:hover {
+    transform: translateY(-5px);
+}
+
+.crypto-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* padding: 2rem; */
+}
+
+.crypto-info {
+    padding: 1em;
+}
+
+.crypto-info h3 {
+    margin: 0.5em 0;
+}
+
+.crypto-info p {
+    margin: 0.5em 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Crypto Card Quick View Button */
+.crypto-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.crypto-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Quick view */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-content {
+    position: relative;
+    text-align: left;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .close:hover {
+    color: #333;
+  }
+
+  /* hambugermenu */
+
+.hamburger-menu {
+    font-size: 1.3rem;
+    /* border-right: 1px solid rgba(0,0,0,.3); */
+    padding: 3px 7px 6px;
+    background-color: transparent;
+    border: none;
+    border-right: 0.1rem solid#9e7d23d3;
+    position: absolute;   
+    right: 5%;
+    top:  1.5rem;
+    display: none;     
+    border-color: #767a7e;
+    
+    
+}
+
+
+
+
+.hamburger-menu::before{
+    content:'☰';
+    color:rgb(170, 170, 170);
+  }
+    
+
+.hamburger-menu.open::before{
+    content: 'X'; 
+   
+}
+
+.myNavinside a:hover {
+	background-color: #1f1913;
+	
+	font-weight: 700;
+}
+.myNavinside  a{
+    display: none;
+}
+
+
+.open.myNavinside a{
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--light-grey);
+}
+
+
+.open.myNavinside {
+	display: grid;    
+    background-color:#502c0b;
+    
+        
+    
+
+}
+
+
+
+
+@media (max-width: 700px) {
+    .myNav a{
+        display: none;
+    }
+
+    .hamburger-menu {
+        
+        display: block;
+    } 
+    
+footer{
+    padding: 1rem;
+    color: #022b38;
+}
+
+#footer1{
+    padding-bottom: 1rem;
+}
+#footer2 a{
+    text-decoration: none;
+    color: #062129;
+}
+
+#footer2{
+  padding-bottom: 1rem;
+}
+
+
+
+.lastfooter{
+  
+  padding-top:1rem ;
+  border-top: solid black;
+  border-width: 0.5px;
+  
+}
+
+  
+
+}
+
+
+footer{
+    padding: 2rem;
+  }
+

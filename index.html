@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Crypto Viewer</title>
+  <meta name="description" content="This page provides honest review and the latest crypto currency availble for trading">
+  <meta name="author" content="[Joseph Israel Uchenna]">
+
+ 
+<!-- facebook meta properties-->
+<meta property="og:title" content="Crypto Viewer - Traders first bite">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="This page provides honest review and the latest crypto currency availble for trading">
+    <meta property="og:image" content="https://stridefuture.com/wp-content/uploads/Cryptocurrency-Blog-Image.png">
+    <meta property="og:url" content="https://josephiu.github.io/wdd230">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Sixtyfour&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+               
+        <header class="divider" id="main-header"></header>
+ 
+
+    </header>
+        <div class="hamburger-menu" id="hamburger-menu"></div>
+        <!-- <button class='Hambuga-menu'></button> -->
+        
+    <div class="myNavinside" id="myNavinside">  
+        <a id="active" href="index.html">Home</a>
+        <a href="https://www.cnbc.com/cryptoworld/">CryptoWorld</a>
+        <a href="https://openai.com/news/">Open AI</a>
+        <a href="https://www.coinbase.com/">coinbase</a>   
+    
+    </div>
+  
+   
+
+    <main>
+        <section class="Hero">
+            
+                <picture>
+                    <source srcset="images/crypto-250x300.webp" media="(max-width: 600px)">   
+                    <source srcset="images/crypto-smaller-450x300px.webp"  media="(max-width: 1200px)">
+                    <img src="images/crypto-big-image1200x600px.webp" alt=" lage image of crypto wall paper" loading="lazy" height="600" width="2000">
+                </picture>           
+       
+            <div class="right-px" id="intro">
+                <h1>
+                    Our Various <strong>Crpto</strong><br>
+                    Investment Recomendations            
+                </h1>
+                <div class="Learn1">
+                    <p id="learn-more-text" style="display: none;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, necessitatibus expedita repudiandae voluptatibus voluptatum quam? Quae quo debitis velit qui doloremque fugit? Fugiat ipsam, laboriosam repellat dolorem rem laudantium quia.</P>
+                </div>            
+                <Span>
+                    <!-- <a href="join.html"> -->
+                    <button id="learn-more-btn">Learn More</button>
+                </a>             
+
+                </Span>            
+            </div>
+        </section>
+       
+
+
+
+        <section id="crypto-controls">
+            <input type="text" id="search" placeholder="Search by name...">
+            <select id="sort">
+                <option value="name-asc">Sort by Name (A-Z)</option>
+                <option value="name-desc">Sort by Name (Z-A)</option>
+                <option value="price-asc">Sort by Price (Low-High)</option>
+                <option value="price-desc">Sort by Price (High-Low)</option>
+            </select>
+        </section>
+        <section class="section-crypo">
+            <section id="crypto-prices">
+                <h2>Current List Of Crypto Prices</h2>    
+                <div id="prices"></div>
+            </section>
+
+            <section id="viewsection">
+                <!-- Modal Structure -->     
+
+                <div id="quick-view-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img id="quick-view-image" src="" alt="Crypto Image">
+                        <h3 id="quick-view-name"></h3>
+                        <p id="quick-view-price"></p>
+                        <!-- <p id="quick-view-info"></p> -->
+                    </div>
+                </div>             
+
+            </section>           
+
+        </section>
+        
+        
+        <section id="crypto-charts">
+            <h2>Crypto Price Charts</h2>
+            <canvas id="myChart"></canvas>
+        </section>
+
+        <section id="newsletter">
+            <h2>Sign Up for our Newsletter</h2>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="thank-you-message" style="display: none;">Thank you for signing up!</p>
+        </section>
+
+            
+    </main>
+      
+    <footer>
+      <!-- <p class="footerFirstP"> &copy;<span id="year"></span>  -->
+    <footer id="main-footer"></footer>
+
+
+    </footer>
+    <script type="module" src="scripts/main.js"></script>
+    
+</body>
+
+</html>
