@@ -1,6 +1,6 @@
-import { loadHeaderFooter, fetchCryptoPrices, handleSearch, handleSort, handleSignup, setupCharts } from './enhancements.js';
+import {fetchCryptoPrices, handleSearch, handleSort, handleSignup, setupCharts } from './enhancements.js';
 
-loadHeaderFooter();
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,17 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Hamburger menu functionality
-    // const hamburgerMenu = document.getElementById('hamburger-menu');
-    // console.log(hamburgerMenu);
-    // const navLinks = document.getElementById('myNav');
-
-    // hamburgerMenu.addEventListener('click', () => {
-    //     navLinks.classList.toggle('show');
-    // });
+ 
 
         const hamButton = document.getElementById('hamburger-menu');
-        const navigation = document.getElementById('myNavinside');
+        const navigation = document.getElementById('myNav');
 
         hamButton.addEventListener('click', () => {
         navigation.classList.toggle('open');

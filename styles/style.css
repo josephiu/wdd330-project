@@ -22,9 +22,10 @@ body {
 .divider {
     border-bottom: 2px solid var(--secondary-color-DarkCyan);
     display: flex;
-    padding: 1rem;
-      justify-content: space-between;
-  background-color: var(--secondary-color-DarkCyan);
+    padding: 1rem 1rem 0.2rem 1rem;
+    justify-content: space-between;
+    background-color: var(--secondary-color-DarkCyan);
+    
 }
 
 .logo {
@@ -36,6 +37,7 @@ body {
     text-align: right;
     font-family: var(--font-headline);
     color: var(--dark-grey);
+    
 }
 
 .highlight{
@@ -61,7 +63,7 @@ body {
     gap: 0.5rem;
     display: flex;
 
-    padding: 1rem;
+    /* padding: 1rem; */
     
    
 }
@@ -78,6 +80,81 @@ body {
     display: none;
 }
 
+  /* hambugermenu */
+
+.hamburger-menu {
+    font-size: 1.3rem;  
+    position: absolute;   
+    right: 3%;
+    top:  2.6rem;
+    display: none;   
+    box-shadow: 1px 5px 50px #000000;    
+        
+}
+
+
+.hamburger-menu::before{
+    content:'☰';
+    color:rgb(170, 170, 170);
+    background-color: #e8fff4;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+  }
+    
+
+.hamburger-menu.open::before{
+    content: 'X'; 
+   
+}
+
+.myNav a:hover {
+	background-color: #e48527;
+    	
+}
+
+.open.myNav {
+	display: block;       
+    position: absolute;  
+    right: 2.5%;
+    top: 5rem; 
+    border-radius: 2rem;   
+    box-shadow: 2px 10px 20px #000000;
+    text-shadow: 2px 10px 20px #000000; 
+    
+
+}
+
+.open.myNav a{
+    display:grid;
+    text-decoration: none;
+    /* padding: 1rem; */
+    color: var(--primary-color-richBlack);
+
+    
+}
+
+
+@media (max-width: 700px) {
+    .myNav{
+        display: none;
+    }
+
+    .hamburger-menu {
+        
+        display: block;
+    } 
+}
+
+main {
+        
+    background-color: #022b38;
+}
+    
+footer{
+    padding: 1rem;
+    color: #022b38;
+}
+
 .Hero picture img{
     position:block;
     width: 100%;    
@@ -92,8 +169,6 @@ body {
     top: 40%;      
     margin-left: 5%;
     margin-right: 5%;  
-    
-
 
 }
 
@@ -102,7 +177,7 @@ body {
    font-size: xx-large;
    font-weight:900;
    color: var(--light-grey);
-   text-shadow: 2px 2px 0.5px #000000;
+   text-shadow: 2px 10px 20px #000000;
   }
 
   #learn-more-text{
@@ -130,24 +205,47 @@ body {
     color:var(--tertiary-color-Lion);    
 
 }
- 
-
 
 
 
 #crypto-controls {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+    background-color: #68570c;
+    padding: 1rem;
 }
 
-#crypto-controls input, #crypto-controls select {
+#crypto-controls select {
     padding: 0.5em;
     font-size: 1em;
+    
 }
 
-#crypto-prices, #newsletter, #crypto-charts {
+#crypto-controls  #search{
+    padding: 0.5em;
+}
+
+#crypto-prices, #newsletter {
     margin-bottom: 2em;
+}
+
+#crypto-charts{
+    background-color: #68570c;
+    padding-top: 1rem;
+
+}
+#crypto-charts h2{
+       color: #aaa;
+       text-align: center;
+       align-content: auto;
+      
+       
+}
+#myChart{
+    padding:0 1rem 0rem 1rem ;
+    color: #aaa;
+    background-color: #eee6c5;
 }
 
 form, #newsletter h2 {
@@ -195,8 +293,8 @@ form button:hover {
 @media (max-width: 700px) {
      
     main {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        
+        background-color: #022b38;
     }
 
     form {
@@ -208,10 +306,15 @@ form button:hover {
         align-items: stretch;
     }
 
-    #crypto-controls input, #crypto-controls select {
-        margin-bottom: 1em;
+    #crypto-controls #search input, #crypto-controls select {
+        margin-bottom: 1rem;
         width: 100%;
     }
+    #crypto-controls #search {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
 }
 
 #prices {
@@ -289,98 +392,88 @@ form button:hover {
     border: 2px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .modal-content {
+.modal-content {
     position: relative;
     text-align: left;
-  }
+ }
   
-  .modal-content h2 {
+.modal-content h2 {
     margin-bottom: 20px;
     color: #333;
-  }
+}
   
-  .modal-content label {
+.modal-content label {
     display: block;
     margin-bottom: 8px;
     color: #555;
-  }
+}
   
-  .modal-content input {
+.modal-content input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
   
-  .modal-content button {
+.modal-content button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
   
-  .modal-content button:hover {
+.modal-content button:hover {
     background-color: #0056b3;
-  }
+}
   
-  .close {
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
     color: #aaa;
-  }
+}
   
-  .close:hover {
+.close:hover {
     color: #333;
-  }
-
-
-
+}
 
 
 @media (max-width: 700px) {
-    .myNav a{
-        display: none;
+    
+        
+    footer{
+        padding: 1rem;
+        color: #022b38;
     }
 
-    .hamburger-menu {
-        
-        display: block;
-    } 
-    
-footer{
-    padding: 1rem;
-    color: #022b38;
-}
+    #footer1{
+        padding-bottom: 1rem;
+    }
+    #footer2 a{
+        text-decoration: none;
+        color: #062129;
+    }
 
-#footer1{
+    #footer2{
     padding-bottom: 1rem;
-}
-#footer2 a{
-    text-decoration: none;
-    color: #062129;
-}
-
-#footer2{
-  padding-bottom: 1rem;
-}
+    }
 
 
 
-.lastfooter{
-  
-  padding-top:1rem ;
-  border-top: solid black;
-  border-width: 0.5px;
-  
-}
+    .lastfooter{
+    
+    padding-top:1rem ;
+    border-top: solid black;
+    border-width: 0.5px;
+    
+    }
 
   
 
