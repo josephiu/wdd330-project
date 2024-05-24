@@ -341,64 +341,6 @@ form button:hover {
     color: #333;
   }
 
-  /* hambugermenu */
-
-.hamburger-menu {
-    font-size: 1.3rem;
-    /* border-right: 1px solid rgba(0,0,0,.3); */
-    padding: 3px 7px 6px;
-    background-color: transparent;
-    border: none;
-    border-right: 0.1rem solid#9e7d23d3;
-    position: absolute;   
-    right: 5%;
-    top:  1.5rem;
-    display: none;     
-    border-color: #767a7e;
-    
-    
-}
-
-
-
-
-.hamburger-menu::before{
-    content:'☰';
-    color:rgb(170, 170, 170);
-  }
-    
-
-.hamburger-menu.open::before{
-    content: 'X'; 
-   
-}
-
-.myNavinside a:hover {
-	background-color: #1f1913;
-	
-	font-weight: 700;
-}
-.myNavinside  a{
-    display: none;
-}
-
-
-.open.myNavinside a{
-    display: block;
-    text-decoration: none;
-    padding: 1rem;
-    color: var(--light-grey);
-}
-
-
-.open.myNavinside {
-	display: grid;    
-    background-color:#502c0b;
-    
-        
-    
-
-}
 
 
 
